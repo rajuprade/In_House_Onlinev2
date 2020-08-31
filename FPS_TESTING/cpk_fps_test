@@ -1,0 +1,1116 @@
+ >>  ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C00 fps reboot
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => reboot
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  reboot
+we wrote on the socket 35  fps reboot
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 35 20-Mar-2015 12:16:35 fps reboot
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 35
+ 20-Mar-2015 12:16:35
+ fps
+  ###### NUmber of RESPONSE MSG is 1
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Reboot
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps run_to_cal
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_to_cal
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_to_cal
+we wrote on the socket 30  fps run_to_cal
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 30 20-Mar-2015 12:16:51 fps run_to_cal
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 30
+ 20-Mar-2015 12:16:51
+ fps
+  ###### NUmber of RESPONSE MSG is 1
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Run to calibrate
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 FPS MCM TIMEOUT #Perodic Monitoring
+###### ANTENNA DEVICE COMMUNICATION is BROKEN
+ ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C00 fps run_to_preset
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_to_preset
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_to_preset
+
+ Enter target encoder value:
+15000
+we wrote on the socket 32  fps run_to_preset
+tar_encr_v 76 29
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 32 20-Mar-2015 12:19:07 fps run_to_preset
+tar_encr_v 76 29
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 32
+ 20-Mar-2015 12:19:07
+ fps
+  ###### NUmber of RESPONSE MSG is 1
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Run to Reset
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 FPS MCM TIMEOUT #Perodic Monitoring
+###### ANTENNA DEVICE COMMUNICATION is BROKEN
+^C
+[teleset@tellab2 Online]$ 
+[teleset@tellab2 Online]$ 
+[teleset@tellab2 Online]$ make
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c mcm_thread.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.   -c main.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.   -o online_v2 main.o system.o shared_mem.o xml.o mcm_thread.o common.o user_info.o socket.o high_user.o queue.o gui.o servo.o servo_queue.o ssclink.o trackservo.o das.o pyenv.o mcm.o fps.o -lxml2 -lm -lpthread -lreadline
+[teleset@tellab2 Online]$ make clean
+rm -f  *.o online_v2     
+[teleset@tellab2 Online]$ make
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c system.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c shared_mem.c 
+shared_mem.c: In function ‘write_shm_das’:
+shared_mem.c:180:50: warning: comparison between pointer and integer [enabled by default]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c xml.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c mcm_thread.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c user_info.c 
+user_info.c: In function ‘user_input’:
+user_info.c:132:20: warning: unused variable ‘b’ [-Wunused-variable]
+user_info.c:132:18: warning: unused variable ‘a’ [-Wunused-variable]
+user_info.c:132:16: warning: unused variable ‘m’ [-Wunused-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c socket.c   
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c high_user.c 
+high_user.c: In function ‘dasdef’:
+high_user.c:996:12: warning: unused variable ‘buf_length’ [-Wunused-variable]
+high_user.c:995:18: warning: unused variable ‘rbuf’ [-Wunused-variable]
+high_user.c: In function ‘highuser’:
+high_user.c:1039:13: warning: unused variable ‘j’ [-Wunused-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c queue.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c common.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c gui.c  
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c servo.c  
+servo.c: In function ‘servo_cmd_list’:
+servo.c:78:10: warning: unused variable ‘buff’ [-Wunused-variable]
+servo.c:77:10: warning: unused variable ‘buf’ [-Wunused-variable]
+servo.c:76:19: warning: unused variable ‘c’ [-Wunused-variable]
+servo.c: In function ‘servosystem’:
+servo.c:263:42: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c servo_queue.c  
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c ssclink.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c trackservo.c 
+trackservo.c: In function ‘SendTrkCmd’:
+trackservo.c:206:3: warning: pointer targets in passing argument 2 of ‘ConvertAng’ differ in signedness [-Wpointer-sign]
+trackservo.h:28:6: note: expected ‘unsigned char *’ but argument is of type ‘char *’
+trackservo.c:207:3: warning: pointer targets in passing argument 2 of ‘ConvertAng’ differ in signedness [-Wpointer-sign]
+trackservo.h:28:6: note: expected ‘unsigned char *’ but argument is of type ‘char *’
+trackservo.c:194:20: warning: variable ‘tbuf’ set but not used [-Wunused-but-set-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c das.c
+das.c: In function ‘create_msgq_’:
+das.c:40:1: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘key_t’ [-Wformat]
+das.c:30:9: warning: unused variable ‘ii’ [-Wunused-variable]
+das.c:29:12: warning: unused variable ‘buf_length’ [-Wunused-variable]
+das.c: In function ‘sndmsgq_’:
+das.c:58:12: warning: variable ‘buf_length’ set but not used [-Wunused-but-set-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c pyenv.c 
+pyenv.c: In function ‘pyenv_interface’:
+pyenv.c:19:28: warning: unused variable ‘cmd1’ [-Wunused-variable]
+pyenv.c:19:20: warning: unused variable ‘del’ [-Wunused-variable]
+pyenv.c:19:13: warning: unused variable ‘token’ [-Wunused-variable]
+pyenv.c:18:15: warning: unused variable ‘no_element’ [-Wunused-variable]
+pyenv.c:18:13: warning: unused variable ‘j’ [-Wunused-variable]
+pyenv.c:15:14: warning: variable ‘a1’ set but not used [-Wunused-but-set-variable]
+pyenv.c:11:12: warning: unused variable ‘buff’ [-Wunused-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c mcm.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c fps.c                         
+gcc -Wall -g -I /usr/include/libxml2  -I.   -c main.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.   -o online_v2 main.o system.o shared_mem.o xml.o mcm_thread.o common.o user_info.o socket.o high_user.o queue.o gui.o servo.o servo_queue.o ssclink.o trackservo.o das.o pyenv.o mcm.o fps.o -lxml2 -lm -lpthread -lreadline
+[teleset@tellab2 Online]$ clear
+
+[teleset@tellab2 Online]$ ./online_v2 
+HIGHUSER thread CREATED=> 0
+SERVO thread CREATED=> 0
+GUI INTERFACE thread CREATED=> 0
+PYTHON INTERFACE thread CREATED=> 0
+MCM SYSTEM thread CREATED=> 0
+
+msgget: Calling msgget(0xc9,01600)
+msgget: msgget succeeded: msqid = 0
+Sucessfully Created MESSAGE QUEUE ID=0
+$$$ SERVER WANTING FOR PYTHON ENVIRONMENT CLIENT TO CONNECT $$$$
+
+ >> ==> SERVO SERVER WANTING FOR CLIENT CONNECTION ===>### SERVER WANTING FOR GUI CLIENT TO CONNECT #####
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.2
+C01 FRONT END thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.33.2
+C04 BE thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.31.2
+C05 SEN thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.4
+C03 SEN thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.31.4
+C08 SEN thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.5
+C02 FRS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.31.3
+SENTINEL thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.3
+SENTINEL C02 thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C00 fps free_run_tow
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => free_run_tow
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  free_run_tow
+Enter 0-towards 270deg / 1-towards -10deg::
+1
+we wrote on the socket 31  fps free_run_tow
+ 1 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 31 20-Mar-2015 12:21:40 fps free_run_tow
+ 1 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 31
+ 20-Mar-2015 12:21:40
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Run Free
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 FPS MCM TIMEOUT #Perodic Monitoring
+###### ANTENNA DEVICE COMMUNICATION is BROKEN
+ ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C00 fps fpsnull
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => fpsnull
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  fpsnull
+we wrote on the socket 10  fps null
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> C00 FPS MCM TIMEOUT #Perodic Monitoring
+###### ANTENNA DEVICE COMMUNICATION is BROKEN
+ ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C^C
+[teleset@tellab2 Online]$ 
+[teleset@tellab2 Online]$ 
+[teleset@tellab2 Online]$ 
+[teleset@tellab2 Online]$ 
+[teleset@tellab2 Online]$ make
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c mcm_thread.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.   -c main.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.   -o online_v2 main.o system.o shared_mem.o xml.o mcm_thread.o common.o user_info.o socket.o high_user.o queue.o gui.o servo.o servo_queue.o ssclink.o trackservo.o das.o pyenv.o mcm.o fps.o -lxml2 -lm -lpthread -lreadline
+[teleset@tellab2 Online]$ make clean
+rm -f  *.o online_v2     
+[teleset@tellab2 Online]$ make
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c system.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c shared_mem.c 
+shared_mem.c: In function ‘write_shm_das’:
+shared_mem.c:180:50: warning: comparison between pointer and integer [enabled by default]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c xml.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c mcm_thread.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c user_info.c 
+user_info.c: In function ‘user_input’:
+user_info.c:132:20: warning: unused variable ‘b’ [-Wunused-variable]
+user_info.c:132:18: warning: unused variable ‘a’ [-Wunused-variable]
+user_info.c:132:16: warning: unused variable ‘m’ [-Wunused-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c socket.c   
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c high_user.c 
+high_user.c: In function ‘dasdef’:
+high_user.c:996:12: warning: unused variable ‘buf_length’ [-Wunused-variable]
+high_user.c:995:18: warning: unused variable ‘rbuf’ [-Wunused-variable]
+high_user.c: In function ‘highuser’:
+high_user.c:1039:13: warning: unused variable ‘j’ [-Wunused-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c queue.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c common.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c gui.c  
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c servo.c  
+servo.c: In function ‘servo_cmd_list’:
+servo.c:78:10: warning: unused variable ‘buff’ [-Wunused-variable]
+servo.c:77:10: warning: unused variable ‘buf’ [-Wunused-variable]
+servo.c:76:19: warning: unused variable ‘c’ [-Wunused-variable]
+servo.c: In function ‘servosystem’:
+servo.c:263:42: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c servo_queue.c  
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c ssclink.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c trackservo.c 
+trackservo.c: In function ‘SendTrkCmd’:
+trackservo.c:206:3: warning: pointer targets in passing argument 2 of ‘ConvertAng’ differ in signedness [-Wpointer-sign]
+trackservo.h:28:6: note: expected ‘unsigned char *’ but argument is of type ‘char *’
+trackservo.c:207:3: warning: pointer targets in passing argument 2 of ‘ConvertAng’ differ in signedness [-Wpointer-sign]
+trackservo.h:28:6: note: expected ‘unsigned char *’ but argument is of type ‘char *’
+trackservo.c:194:20: warning: variable ‘tbuf’ set but not used [-Wunused-but-set-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c das.c
+das.c: In function ‘create_msgq_’:
+das.c:40:1: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘key_t’ [-Wformat]
+das.c:30:9: warning: unused variable ‘ii’ [-Wunused-variable]
+das.c:29:12: warning: unused variable ‘buf_length’ [-Wunused-variable]
+das.c: In function ‘sndmsgq_’:
+das.c:58:12: warning: variable ‘buf_length’ set but not used [-Wunused-but-set-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c pyenv.c 
+pyenv.c: In function ‘pyenv_interface’:
+pyenv.c:19:28: warning: unused variable ‘cmd1’ [-Wunused-variable]
+pyenv.c:19:20: warning: unused variable ‘del’ [-Wunused-variable]
+pyenv.c:19:13: warning: unused variable ‘token’ [-Wunused-variable]
+pyenv.c:18:15: warning: unused variable ‘no_element’ [-Wunused-variable]
+pyenv.c:18:13: warning: unused variable ‘j’ [-Wunused-variable]
+pyenv.c:15:14: warning: variable ‘a1’ set but not used [-Wunused-but-set-variable]
+pyenv.c:11:12: warning: unused variable ‘buff’ [-Wunused-variable]
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c mcm.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.  -c fps.c                         
+gcc -Wall -g -I /usr/include/libxml2  -I.   -c main.c 
+gcc -Wall -g -I /usr/include/libxml2  -I.   -o online_v2 main.o system.o shared_mem.o xml.o mcm_thread.o common.o user_info.o socket.o high_user.o queue.o gui.o servo.o servo_queue.o ssclink.o trackservo.o das.o pyenv.o mcm.o fps.o -lxml2 -lm -lpthread -lreadline
+[teleset@tellab2 Online]$ ./online_v2 
+HIGHUSER thread CREATED=> 0
+SERVO thread CREATED=> 0
+GUI INTERFACE thread CREATED=> 0
+PYTHON INTERFACE thread CREATED=> 0
+MCM SYSTEM thread CREATED=> 0
+==> SERVO SERVER WANTING FOR CLIENT CONNECTION ===>
+msgget: Calling msgget(0xc9,01600)
+msgget: msgget succeeded: msqid = 0
+Sucessfully Created MESSAGE QUEUE ID=0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+
+ >> ### SERVER WANTING FOR GUI CLIENT TO CONNECT #####
+$$$ SERVER WANTING FOR PYTHON ENVIRONMENT CLIENT TO CONNECT $$$$
+ ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.31.3
+SENTINEL thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.31.4
+C08 SEN thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.33.2
+C04 BE thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.2
+C01 FRONT END thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.31.2
+C05 SEN thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.3
+SENTINEL C02 thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.5
+C02 FRS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+ ACCEPTED CONNECTION FROM MCM DEVICE 192.168.32.4
+C03 SEN thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C00 fps fpsnull
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => fpsnull
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  fpsnull
+we wrote on the socket 10  fps null
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 10 20-Mar-2015 12:25:15 fps null
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 10
+ 20-Mar-2015 12:25:15
+ fps
+  ###### NUmber of RESPONSE MSG is 4
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Feed Calibrated and Idle
+ EncCount = 1508
+ Rpm = 0
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_version
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_version
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_version
+we wrote on the socket 25  fps read_version
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 25 20-Mar-2015 12:25:58 fps read_version
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 25
+ 20-Mar-2015 12:25:58
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Version: 8.5 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_Max_angle
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_Max_angle
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_Max_angle
+we wrote on the socket 28  fps read_Max_angle
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 28 20-Mar-2015 12:26:22 fps read_Max_angle
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 28
+ 20-Mar-2015 12:26:22
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Max Angle, 17284 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_Min_angle
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_Min_angle
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_Min_angle
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 29 20-Mar-2015 12:27:05 fps read_Min_angle
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 29
+ 20-Mar-2015 12:27:05
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Min Angle, 1468 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_Brake_dd
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_Brake_dd
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_Brake_dd
+we wrote on the socket 23  fps read_Brake_dd
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 23 20-Mar-2015 12:27:54 fps read_Brake_dd
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 23
+ 20-Mar-2015 12:27:54
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Break Count Diff, 4 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_tpoint
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_tpoint
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_tpoint
+we wrote on the socket 20  fps read_tpoint
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 20 20-Mar-2015 12:28:22 fps read_tpoint
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 20
+ 20-Mar-2015 12:28:22
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Turning Point, target: 300
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_low_rpm
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_low_rpm
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_low_rpm
+we wrote on the socket 22  fps read_low_rpm
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 22 20-Mar-2015 12:28:45 fps read_low_rpm
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 22
+ 20-Mar-2015 12:28:45
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Lower Ramp Limit, 649 int 325
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_rampupcnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_rampupcnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_rampupcnt
+we wrote on the socket 24  fps read_rampupcnt
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 24 20-Mar-2015 12:29:14 fps read_rampupcnt
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 24
+ 20-Mar-2015 12:29:14
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Ramp up Count, 20 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_rampdcnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_rampdcnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_rampdcnt
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 21 20-Mar-2015 12:29:47 fps read_rampdcnt
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 21
+ 20-Mar-2015 12:29:47
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Ramp Down Count, Slope: 80
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_Max_pwm_cnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_Max_pwm_cnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_Max_pwm_cnt
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 27 20-Mar-2015 12:30:21 fps read_Max_pwm_cnt
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 27
+ 20-Mar-2015 12:30:21
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Max PWM Count, 80 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_stoptimecnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_stoptimecnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_stoptimecnt
+we wrote on the socket 26  fps read_stoptimecnt
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 26 20-Mar-2015 12:30:44 fps read_stoptimecnt
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 26
+ 20-Mar-2015 12:30:44
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Stop Count, 20 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_tpoint
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_tpoint
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_tpoint
+
+Enter turning point position difference:
+200
+we wrote on the socket 11  fps set_tpoint
+set_tpoint 100 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 11 20-Mar-2015 12:31:58 fps set_tpoint
+set_tpoint 100 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 11
+ 20-Mar-2015 12:31:58
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Turning Point, target: 200
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_Max_pwm_cnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_Max_pwm_cnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_Max_pwm_cnt
+Enter max PWM cnt:
+50
+we wrote on the socket 17  fps set_Max_pwm_cnt
+set_Max_pwm_cnt 50 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 17 20-Mar-2015 12:32:46 fps set_Max_pwm_cnt
+set_Max_pwm_cnt 50 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 17
+ 20-Mar-2015 12:32:46
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Max PWM Count, 32 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_Max_pwm_cnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_Max_pwm_cnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_Max_pwm_cnt
+Enter max PWM cnt:
+80
+we wrote on the socket 17  fps set_Max_pwm_cnt
+set_Max_pwm_cnt 80 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 17 20-Mar-2015 12:34:41 fps set_Max_pwm_cnt
+set_Max_pwm_cnt 80 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 17
+ 20-Mar-2015 12:34:41
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Max PWM Count, 50 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_Max_pwm_cnt
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_Max_pwm_cnt
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_Max_pwm_cnt
+Enter max PWM cnt:
+80
+we wrote on the socket 17  fps set_Max_pwm_cnt
+set_Max_pwm_cnt 80 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 17 20-Mar-2015 12:35:14 fps set_Max_pwm_cnt
+set_Max_pwm_cnt 80 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 17
+ 20-Mar-2015 12:35:14
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Max PWM Count, 50 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_Max_angle
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_Max_angle
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_Max_angle
+
+Enter angle count:
+17300
+we wrote on the socket 18  fps set_Max_angle
+set_Max_angle 202 33
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 18 20-Mar-2015 12:37:28 fps set_Max_angle
+set_Max_angle 202 33
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 18
+ 20-Mar-2015 12:37:28
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Max Angle, 17300 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_min_angle
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_min_angle
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_min_angle
+
+Enter angle count:
+1450
+we wrote on the socket 19  fps set_min_angle
+set_min_angle 213 2
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 19 20-Mar-2015 12:38:07 fps set_min_angle
+set_min_angle 213 2
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 19
+ 20-Mar-2015 12:38:07
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Min Angle, 1450 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_Brake_dd
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_Brake_dd
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_Brake_dd
+Enter Break Cnt difference::
+6
+we wrote on the socket 14  fps set_Brake_dd
+set_Brake_dd 3 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 14 20-Mar-2015 12:38:45 fps set_Brake_dd
+set_Brake_dd 3 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 14
+ 20-Mar-2015 12:38:45
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Break Count Diff, 6 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_low_rpm
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_low_rpm
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_low_rpm
+Enter Lower RPM limit:
+630
+Enter Check-Interval(ms)::
+20
+we wrote on the socket 13  fps set_low_rpm
+set_low_rpm 4 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 13 20-Mar-2015 12:39:29 fps set_low_rpm
+set_low_rpm 4 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 13
+ 20-Mar-2015 12:39:29
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Lower Ramp Limit, 0 int 20
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps set_low_rpm
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => set_low_rpm
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  set_low_rpm
+Enter Lower RPM limit:
+300
+Enter Check-Interval(ms)::
+20
+we wrote on the socket 13  fps set_low_rpm
+set_low_rpm 4 0
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 13 20-Mar-2015 12:40:22 fps set_low_rpm
+set_low_rpm 4 0
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 13
+ 20-Mar-2015 12:40:22
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Set Lower Ramp Limit, 0 int 20
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_low_rpm
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_low_rpm
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_low_rpm
+we wrote on the socket 22  fps read_low_rpm
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 22 20-Mar-2015 12:40:41 fps read_low_rpm
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 22
+ 20-Mar-2015 12:40:41
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Read Lower Ramp Limit, 0 int 20
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+ >> C00 fps reboot
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => reboot
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  reboot
+we wrote on the socket 35  fps reboot
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 35 20-Mar-2015 12:44:41 fps reboot
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 35
+ 20-Mar-2015 12:44:41
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Reboot
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps read_Max_angle
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => read_Max_angle
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  read_Max_angle
+we wrote on the socket 28  fps read_Max_angle
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 28 20-Mar-2015 12:45:05 fps read_Max_angle
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 28
+ 20-Mar-2015 12:45:05
+ fps
+  ###### NUmber of RESPONSE MSG is 1
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Read Max Angle, 17284 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps run_fine_tune
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_fine_tune
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_fine_tune
+
+ Enter target encoder value:
+1550
+
+Enter PWM cnt:
+90
+we wrote on the socket 33  fps run_fine_tune
+tar_encr_v 7 3
+pwm_cnt 90 144
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 33 20-Mar-2015 12:45:59 fps run_fine_tune
+tar_encr_v 7 3
+pwm_cnt 90 144
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 33
+ 20-Mar-2015 12:45:59
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  FPS rejected command
+ Read Max Angle, 17284 
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps run_to_cal
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_to_cal
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_to_cal
+we wrote on the socket 30  fps run_to_cal
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 30 20-Mar-2015 12:46:22 fps run_to_cal
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 30
+ 20-Mar-2015 12:46:22
+ fps
+  ###### NUmber of RESPONSE MSG is 1
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps run_fine_tuneC00 FPS MCM TIMEOUT #Perodic Monitoring
+###### ANTENNA DEVICE COMMUNICATION is BROKEN
+ ACCEPTED CONNECTION FROM FPS MCM DEVICE 192.168.21.107
+FPS thread opened succesfully=> 0
+############# SERVER WANTING FOR CLIENT CONNECTION #####
+C00 fps run_to_preset
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_fine_tuneC00
+ CMD[3] => fps
+ CMD[4] => run_to_preset
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_fine_tuneC00
+
+ >> C00 fps run_to_preset
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_to_preset
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_to_preset
+
+ Enter target encoder value:
+15000
+we wrote on the socket 32  fps run_to_preset
+tar_encr_v 76 29
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 32 20-Mar-2015 12:48:30 fps run_to_preset
+tar_encr_v 76 29
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 32
+ 20-Mar-2015 12:48:30
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Run to Reset
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+C00 fps run_fine_tune
+
+ CMD[0] => C00
+ CMD[1] => fps
+ CMD[2] => run_fine_tune
+Command for C00 ANTENNA
+ANTENNA C00 C00
+System  fps
+OP NAME  run_fine_tune
+
+ Enter target encoder value:
+15050
+
+Enter PWM cnt:
+70
+we wrote on the socket 33  fps run_fine_tune
+tar_encr_v 101 29
+pwm_cnt 70 112
+ Size of Struct is ######## 1638
+ ###### Element in Command Queue fps
+ INSERTING in Command Queue fps
+
+ >> we wrote on the socket 33 20-Mar-2015 12:49:54 fps run_fine_tune
+tar_encr_v 101 29
+pwm_cnt 70 112
+ Size of Struct is ######## 1638
+Size of Response Struct => 4698
+ MCM => 1
+ 33
+ 20-Mar-2015 12:49:54
+ fps
+  ###### NUmber of RESPONSE MSG is 2
+888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 888 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999 999  Exec. OK
+ Run to Fine Tune
+ Writing to ONLINE from FPS THREAD SUCCESSFUL
+
+

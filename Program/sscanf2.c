@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+
+  char text[120]="hello:123:234:223";
+  int a[3]={-1,-1,-1};
+  char str[120];
+
+ //sscanf(text,"%s:%d:%d:%d",&str, &a[0], &a[1], &a[2]);
+  sscanf(text,"%[a-z-A-Z]:%d:%d:%d",&str, &a[0], &a[1], &a[2]);
+ printf("%s, %d, %d, %d\n",str,a[0],a[1],a[2]); 
+
+  return 0;
+}

@@ -1,0 +1,52 @@
+##############################################################
+#
+# Makefile 
+##############################################################
+
+
+####### Compilers, tolls and options
+
+CFLAGS = -Wall -O2 
+INCPATH = -I /usr/include/libxml2 
+RM = rm -f
+CC = gcc
+LIBS= -lxml2 -lm 
+LIBXML=-L/usr/include/libxml2 
+LIBS0=${LIBS} ${LIBXML} 
+####### Files
+
+SOURCES = serv.c server.c
+
+HEADERS = server.h 
+
+OBJECTS = serv.o server.o
+
+PROG = teleset
+
+first: all
+
+######## Implicites rules
+# tab with vim, not kde
+
+.c.o:
+	$(CC) -c  $(CFLAGS) $(INCPATH) -o  $@ $< 
+
+####### Build rules
+
+all: Makefile $(PROG) 
+
+$(PROG): $(OBJECTS)
+	gcc $(CFLAGS) $(LIBXMl) -o $(PROG) $(OBJECTS) $(LIBS)
+
+
+clean:
+	$(RM) $(PROG) $(OBJECTS) *~ *core*
+
+
+####### Compile
+
+server.o: server.c server.h 
+
+serv.o: serv.c server.h
+
+

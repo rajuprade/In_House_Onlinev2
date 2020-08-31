@@ -1,0 +1,60 @@
+##############################################################
+#
+# Makefile 
+##############################################################
+
+
+####### Compilers, tolls and options
+
+CFLAGS = -Wall -O2 
+LFLAGS = -lxml2
+INCPATH = -I /usr/include/libxml2 
+RM = rm -f
+CC = gcc
+LIBS= -lm -L/usr/lib -lnsl
+LIBXML=-L/usr/include/libxml2 -lxml2
+LIBS0=${LIBS} ${LIBXML} 
+####### Files
+
+SOURCES = teleset.c system.c shared_mem.c xml.c common.c user_info.c
+
+HEADERS = server.h 
+
+OBJECTS = teleset.o system.o shared_mem.o xml.o common.o user_info.o 
+
+PROG = teleset
+
+first: all
+
+######## Implicites rules
+# tab with vim, not kde
+
+.c.o:
+	$(CC) -c $(LFLAGS) $(CFLAGS) $(INCPATH) -o $@ $< 
+
+####### Build rules
+
+all: Makefile $(PROG)
+
+$(PROG): $(OBJECTS)
+		 $(OBJECTS) ${LIBS0} -o $(PROG)
+
+clean:
+	$(RM) $(PROG) $(OBJECTS) *~ *core*
+
+
+####### Compile
+
+teleset.o: teleset.c server.h 
+
+system.o: system.c server.h
+
+shared_mem.o: shared_mem.c server.h
+
+xml.o: xml.c server.h
+
+common.o: common.c server.h
+
+user_info.o: user_info.c server.h
+
+

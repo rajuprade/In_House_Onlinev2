@@ -1,0 +1,44 @@
+#include <iostream.h>
+ 
+enum athel_names { Ed, Joe, Bill, Dan};
+enum class_level { Freshman, Sophomore, Junior, Senior, Drop_Out, Graduate };
+enum sport_teams { Football, Basketball, Baseball, None };
+enum grade_acept { Yes, No };
+ 
+struct students
+{
+athel_names an;
+class_level cl;
+sport_teams st;
+grade_acept ga;
+};
+ 
+int main()
+{
+students sport;
+     
+sport.an = Ed;
+sport.cl = Senior;
+sport.st = Football;
+sport.ga = No;
+ 
+
+  switch ( sport.an ) {
+  case Ed:
+    cout << "Ed\n";    
+    break;
+  case Joe:         
+    cout << "Joe\n";    
+    break;
+  case Bill:           
+    cout << "Bill\n";    
+    break;
+  case Dan:        
+    cout << "Dan\n";  
+    break;
+  default:     
+    break;
+  }
+ 
+return 0;
+}

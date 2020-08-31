@@ -1,0 +1,15 @@
+
+  GDSL - Generic Data Structures Library
+  $Id: AUTHORS,v 1.7 2012/08/21 13:00:03 ndarnis Exp $
+  ______________________________________________________________________________
+
+  This is a list of authors who have written or edited parts of the
+  GDSL sources.
+
+  - GDSL (as a whole, excepted modules below)
+    Written by: Nicolas Darnis <ndarnis@free.fr>.
+
+  - interval_heap module
+    Written by: Peter Kerpedjiev <pkerpedjiev@gmail.com>.
+
+                                                                  The GDSL Team.

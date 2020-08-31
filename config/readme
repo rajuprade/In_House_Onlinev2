@@ -1,0 +1,13 @@
+
+ cp -p editpreference.ui_bak editpreference.ui
+ cp -p editpreference.ui.h_bak editpreference.ui.h
+ cp -p editpref_main.cpp_bak main.cpp
+
+ make clean
+ qmake -project ; qmake -makefile ; make
+ ./editpreference
+
+ mv  editpreference.ui editpreference.ui_bak
+ mv  editpreference.ui.h editpreference.ui.h_bak
+ mv  main.cpp editpref_main.cpp_bak
+

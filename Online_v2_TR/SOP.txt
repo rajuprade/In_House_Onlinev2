@@ -1,0 +1,37 @@
+## SOP to run Online_v2 program on teleset machine
+
+Machine name : teleset
+IP of teleset machine : 192.168.8.45
+password : teleset123
+
+## to run program 
+
+1. Go to directory 
+
+   $ cd /home/teleset/Online_v2/Online
+   $ ./online_v2
+
+2. Once MCM device gets connected to online_v2 program
+   IP of MCM device will appear of Screen.
+
+3. For giving command to front end system 
+
+  3.1 C00 front_end set // For setting
+  3.2 C00 front_end mon // For Monitoring.
+
+### In case of some power shutdown/MSEB failure or any case
+
+4. Just check whether online_v2 server is running
+
+  $ ps aux | grep online_v2
+  => this will give pid of that process
+  $ Kill -9 {PID}
+
+
+#### For giving command from QT/QML GUI
+
+1. Go to directory 
+
+  $ cd /home/teleset/Desktop/New_Online/
+  $ ./Online
+

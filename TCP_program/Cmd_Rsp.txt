@@ -1,0 +1,35 @@
+struct Command
+ {
+  unsigned long Sequence_No;
+  char TimeStamp[32];
+
+  char System_Name[16];
+  char Operation_Name[16];
+  int  No_Of_Parameter;
+  char Parameter_Name[32][16];
+  char Argument_Ch1[32][16];
+  char Argument_Ch2[32][16];
+ }
+
+
+struct Response
+ {
+  int Response_Type;
+  unsigned long Sequence_No;
+  char TimeStamp[32];
+  
+  char System_Name[16];
+
+  char Mon_Raw[64][8];
+  char Mon_Sum[64][16];
+
+  char Response_Message[32][32];
+ }
+
+struct Alarm
+ {
+  int Alarm_Priority;
+  int Alarm_Type;
+
+  char Alarm_Message[64];  
+ }

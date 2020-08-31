@@ -1,0 +1,18 @@
+{ Corrsel.def
+GSB_MODE    = 0              /* 0 - Realtime, 1 - RawDump          */
+GSB_LTA     = 8              /* 8 - fixed value                    */
+GSB_ACQ_BW  = 33.333333      /* 16.666666 or 33.333333             */
+GSB_FINAL_BW= 0              /* 0,4,8,16,32,64,128 As frac of Nyq, Val = OFF */
+GSB_EDGE_FRQ= 0              /* Freq Entry in steps of Nyq, Val = 0 */
+GSB_CHAN_MAX= 256            /* 256/512                            */
+GSB_CHAN_NUM= 0:255:1        /* any range i:j:1;for i,j<chan_max   */
+GSB_STOKES  = 4              /* 2 Total_Intensity; 4 Full_Stokes   */
+GSB_CNTRL   = 1              /* 0 -LOCAL, 1 -ONLINE, 2 -MANUAL     */
+GSB_FSTOP   = 1              /* 1 - ON, 0 - OFF                    */
+GSB_BEAM_1  = 0:1            /* 0-OFF,1-IA,2-PA,3-Volt:time res 1=30/2=60 */
+GSB_BEAM_2  = 0:1            /* 0-OFF,1-PA,2-PA,3-Volt:time res 1=30/2=60 */
+GSB_GAINEQ  = 1              /* 1 - ON, 0 - OFF                    */
+GSB_BB_LO   = 149000000.0:156000000.0             /* 32-149:156,16 -138:167,6-133:172   */
+}Corrsel
+*
+END_OF_HEADER			/*  VERSION RELEASED */

@@ -1,0 +1,827 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>EditPreference</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>EditPreference</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>487</width>
+            <height>407</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>GPU CONFIG GUI</string>
+    </property>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonPhasing</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>340</x>
+                <y>260</y>
+                <width>120</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>PHASING</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonPulsarConsole</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>340</x>
+                <y>300</y>
+                <width>120</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>PULSAR CONSOLE</string>
+        </property>
+        <property name="accel">
+            <string></string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelAcqBw</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>100</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt; ACQ BW (MHz) &lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelChan</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>140</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;CHANNELS&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelStokes</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>180</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;STOKES&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelIfBw</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>220</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;IF BW (MHz)&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelFinBw</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>260</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;FINAL BW (MHz)&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelBeams</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>300</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;BEAM DATA&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonPowerEq</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>340</x>
+                <y>220</y>
+                <width>120</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>POWER EQ</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>512</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>1024</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>2048</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBoxChan</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>140</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>comboBoxIfBw</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>220</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <property name="name">
+            <cstring>comboBoxFinBw</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>260</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonDataMon</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>340</x>
+                <y>180</y>
+                <width>120</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>DATA MON</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>400.0000</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>200.0000</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>150.0000</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>100.0000</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>50.0000</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBoxAcqBw</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>100</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>4 STOKES</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>2 STOKES</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>Single POL USB-130</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBoxStokes</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>180</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>OFF</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBoxBeams</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>300</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>32</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>16</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>8</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>4</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>2</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>1</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBoxLta</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>60</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonOnline</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>341</x>
+                <y>100</y>
+                <width>120</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>Control ONLINE</string>
+        </property>
+    </widget>
+    <widget class="QRadioButton">
+        <property name="name">
+            <cstring>radioButtonGain</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>350</x>
+                <y>25</y>
+                <width>100</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="paletteBackgroundColor">
+            <color>
+                <red>85</red>
+                <green>170</green>
+                <blue>0</blue>
+            </color>
+        </property>
+        <property name="mouseTracking">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>GAIN ON</string>
+        </property>
+        <property name="checked">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelMode</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>130</width>
+                <height>30</height>
+            </rect>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;MODE&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QLabel">
+        <property name="name">
+            <cstring>textLabelLta</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>60</y>
+                <width>130</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="acceptDrops">
+            <bool>false</bool>
+        </property>
+        <property name="frameShape">
+            <enum>Box</enum>
+        </property>
+        <property name="text">
+            <string>&lt;p align="center"&gt;LTA&lt;/p&gt;</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonQuit</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>360</x>
+                <y>360</y>
+                <width>100</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="acceptDrops">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>QUIT</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+Q</string>
+        </property>
+        <property name="toggleButton">
+            <bool>false</bool>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+            <bool>false</bool>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonDefault</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>250</x>
+                <y>360</y>
+                <width>100</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>DEFAULT</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+D</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonLoad</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>130</x>
+                <y>360</y>
+                <width>100</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>LOAD</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+L</string>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonSave</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>20</x>
+                <y>360</y>
+                <width>100</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>SAVE</string>
+        </property>
+        <property name="accel">
+            <string>Ctrl+S</string>
+        </property>
+    </widget>
+    <widget class="QComboBox">
+        <item>
+            <property name="text">
+                <string>REALTIME</string>
+            </property>
+        </item>
+        <item>
+            <property name="text">
+                <string>RAWDUMP</string>
+            </property>
+        </item>
+        <property name="name">
+            <cstring>comboBoxMode</cstring>
+        </property>
+        <property name="enabled">
+            <bool>true</bool>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>160</x>
+                <y>20</y>
+                <width>150</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="mouseTracking">
+            <bool>true</bool>
+        </property>
+        <property name="toolTip" stdset="0">
+            <string>Select GPU mode.</string>
+        </property>
+    </widget>
+    <widget class="QRadioButton">
+        <property name="name">
+            <cstring>radioButtonFstop</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>350</x>
+                <y>60</y>
+                <width>100</width>
+                <height>20</height>
+            </rect>
+        </property>
+        <property name="paletteBackgroundColor">
+            <color>
+                <red>85</red>
+                <green>170</green>
+                <blue>0</blue>
+            </color>
+        </property>
+        <property name="mouseTracking">
+            <bool>true</bool>
+        </property>
+        <property name="text">
+            <string>FSTOP ON</string>
+        </property>
+        <property name="checked">
+            <bool>true</bool>
+        </property>
+    </widget>
+    <widget class="QPushButton">
+        <property name="name">
+            <cstring>pushButtonDasConsole</cstring>
+        </property>
+        <property name="geometry">
+            <rect>
+                <x>340</x>
+                <y>140</y>
+                <width>120</width>
+                <height>31</height>
+            </rect>
+        </property>
+        <property name="text">
+            <string>DAS CONSOLE</string>
+        </property>
+        <property name="toggleButton">
+            <bool>false</bool>
+        </property>
+        <property name="on">
+            <bool>false</bool>
+        </property>
+    </widget>
+</widget>
+<connections>
+    <connection>
+        <sender>pushButtonDasConsole</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>dasconsole()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonSave</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>save()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonLoad</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>load()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonDefault</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>defaultpara()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonQuit</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>close()</slot>
+    </connection>
+    <connection>
+        <sender>radioButtonGain</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuGain_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxMode</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuMode(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>radioButtonFstop</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuFstop_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxLta</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuLta(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxAcqBw</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuAcqBw(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxChan</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuChan(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxStokes</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuStokes(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxIfBw</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuIfBw(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxFinBw</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuFinBw(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxBeams</sender>
+        <signal>activated(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuBeams(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonOnline</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuControl()</slot>
+    </connection>
+    <connection>
+        <sender>radioButtonFstop</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>radioButtonFstop_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>radioButtonGain</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>radioButtonGain_stateChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>comboBoxMode</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>EditPreference</receiver>
+        <slot>GpuMode_textChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonDasConsole</sender>
+        <signal>clicked()</signal>
+        <receiver>pushButtonDasConsole</receiver>
+        <slot>toggle()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonSave</sender>
+        <signal>clicked()</signal>
+        <receiver>EditPreference</receiver>
+        <slot>write_shm()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>comboBoxMode</tabstop>
+    <tabstop>comboBoxLta</tabstop>
+    <tabstop>comboBoxAcqBw</tabstop>
+    <tabstop>comboBoxChan</tabstop>
+    <tabstop>comboBoxStokes</tabstop>
+    <tabstop>comboBoxIfBw</tabstop>
+    <tabstop>comboBoxFinBw</tabstop>
+    <tabstop>comboBoxBeams</tabstop>
+    <tabstop>radioButtonGain</tabstop>
+    <tabstop>radioButtonFstop</tabstop>
+    <tabstop>pushButtonOnline</tabstop>
+    <tabstop>pushButtonDasConsole</tabstop>
+    <tabstop>pushButtonDataMon</tabstop>
+    <tabstop>pushButtonPowerEq</tabstop>
+    <tabstop>pushButtonPhasing</tabstop>
+    <tabstop>pushButtonPulsarConsole</tabstop>
+    <tabstop>pushButtonSave</tabstop>
+    <tabstop>pushButtonLoad</tabstop>
+    <tabstop>pushButtonDefault</tabstop>
+    <tabstop>pushButtonQuit</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">editpreference.ui.h</include>
+</includes>
+<slots>
+    <slot>GpuMode( const QString &amp; )</slot>
+    <slot>GpuLta( const QString &amp; )</slot>
+    <slot>GpuAcqBw( const QString &amp; )</slot>
+    <slot>GpuChan( const QString &amp; )</slot>
+    <slot>GpuStokes( const QString &amp; )</slot>
+    <slot>GpuControl()</slot>
+    <slot>GpuIfBw( const QString &amp; )</slot>
+    <slot>GpuFinBw( const QString &amp; )</slot>
+    <slot>GpuBeams( const QString &amp; )</slot>
+    <slot>GpuGain_clicked()</slot>
+    <slot>GpuFstop_clicked()</slot>
+    <slot>dasconsole()</slot>
+    <slot>DasConsole_stateChanged()</slot>
+    <slot>save()</slot>
+    <slot>write_shm()</slot>
+    <slot>load()</slot>
+    <slot>defaultpara()</slot>
+    <slot>radioButtonFstop_stateChanged( int t )</slot>
+    <slot>radioButtonGain_stateChanged( int t )</slot>
+    <slot>close()</slot>
+    <slot>GpuMode_textChanged( const QString &amp; )</slot>
+    <slot>DasConsole_started()</slot>
+    <slot>DasConsole_exited()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<pixmapfunction>init</pixmapfunction>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

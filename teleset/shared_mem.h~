@@ -1,0 +1,8 @@
+#ifndef H_SHARED_MEM_H
+#define H_SHARED_MEM_H
+#include <sys/ipc.h>
+#include <sys/shm.h>
+
+#define SHMSZ1 sizeof(cmd)
+#define SHMSZ2 sizeof(resp) 
+#endif 

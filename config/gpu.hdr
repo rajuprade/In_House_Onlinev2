@@ -1,0 +1,18 @@
+{ Corrsel.def
+GPU_MODE    = 1               /* 0 - Realtime, 1 - RawDump          */
+GPU_LTA     = 32              /* 8 - fixed value                    */
+GPU_ACQ_BW  = 50.0000        /* 16.666666 or 33.333333             */
+GPU_FINAL_BW= 0               /* 0,4,8,16,32,64,128 As frac of Nyq, Val = OFF */
+GPU_EDGE_FRQ= 0.000000        /* Freq Entry in steps of Nyq, Val = 0 */
+GPU_CHAN_MAX= 512             /* 256/512                            */
+GPU_CHAN_NUM= 0:511:1         /* any range i:j:1;for i,j<chan_max   */
+GPU_STOKES  = 4               /* 2 Total_Intensity; 4 Full_Stokes   */
+GPU_CNTRL   = 0               /* 0 -LOCAL, 1 -ONLINE, 2 -MANUAL     */
+GPU_FSTOP   = 0               /* 1 - ON, 0 - OFF                    */
+GPU_BEAM_1  = 0:1             /* 0-OFF,1-IA,2-PA,3-Volt:time res 1=30/2=60 */
+GPU_BEAM_2  = 0:1             /* 0-OFF,1-PA,2-PA,3-Volt:time res 1=30/2=60 */
+GPU_GAINEQ  = 0               /* 1 - ON, 0 - OFF                    */
+GPU_BB_LO   = 149000000.0:156000000.0          /* 32-149:156,16 -138:167,6-133:172   */
+}Corrsel
+*
+END_OF_HEADER			/*  VERSION RELEASED */

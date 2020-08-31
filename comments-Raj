@@ -1,0 +1,109 @@
+
+1) Reduce length of abstract.
+
+For example, you can remove that the upgrade in the control and monitor system is
+required by the wide bandwidth since  it is required
+irespective of any change in the bandwidth etc.  The CnM upgrade is
+required to speed up antenna communication by exploiting the power of 
+the upgraded ethernet over
+the OF.  This alongwith the upgraded servo PC104 would result in reduced 
+overhead times for several antenna control operationns.   The wideband
+RF can be handled by the existing ONLINE as it is being done now and does
+not require an associated change in CnM.
+
+Abstract can deal with what you are discussing in this report - all
+the general parts can become part of the background.
+
+2) Figure 1: architectural block diagram:
+   (a) remove supervisory MCM since its not separate - its just a role played by one of the MCMs.
+   (b) as things have developed, we have a web-based engineer interface instead of desktop
+       based.  So can change that.
+   (c) Also include Python in the 'desktop operators interface'.
+
+Also in the text you should refer to the figures that are included and hence you need to
+number the figures.  This would be figure 1.
+
+3) Maybe add a paragraph in the background giving the reasons why OnlineV2 was thought about?
+  Actually shifting the first paragraph of abstract to second paragraph of
+  background will be useful and then
+  you can end by saying something like  'this report explains how this is implemented'.
+   
+4) In the abstract you talk about '...turn around time of 1 to 3 sec.' - I thought our tests
+show its within 1 second - in fact within 0.5 second?   Please check and modify as required.
+
+5) Structure: why....
+Maybe modify that the ANTCOM is not required since the Rabbit MCM and ethernet have ensured
+that the load is shared by the central OnlineV2 computer and the Rabbit MCM.  For
+example, the
+tracking commands which were issued by the ANTCOM will now be send from the central computer
+whereas the supervisory role will be played by the MCM.
+Maybe it will useful to note down how the split of tasks has happened between Rabbit MCM
+and the central computer for each of ANTCOM tasks.
+
+6) Implementation:  how many threads do you open in the current system?  do you envisage
+any more being required ?  
+
+7) Section headings need to be formatted differently else even the subsections appear like sections.
+I had to keep referring to the index to figure out when I was at a new section.
+
+8) OnlineV2-MCM-servo communication protocol:
+  Outline all the changes between this and the 15m protocol.  The trimming is one important
+change - what other changes were there, if any?  Also note that trimming was done to reduce
+the communication times between 30 antennas and control computer. 
+
+9) Comparision between present online....
+This is good.  Explain what MCM 10 is.
+
+10) Testing of OnlineV2 core softwre:
+lab testing:  Refer to the figures in the text - so refer to the figures on round trip times
+when you discuss it in the section.   
+
+In 'plots of round trip time' - what do you mean  by 'small unmanageable switch'?
+
+what is the diference between fig 3 and fig 5 ?
+
+11) Antenna testing:
+
+What do you mean by 'The RF power was going down by 2 dB for entire range of attenuation values'.
+Please explain.
+
+  In Sentinel system testing:  you have described the lab test which should be shifted to
+previous section and descrbie the antenna shell testing here.
+
+12) OnlineV2 - 16 antenna test:
+
+describe the setup for testing in a few sentences before going into details.
+Also how each antenna was included in the testing and OnlneV2 recognised it.
+
+13) summary:
+
+Suggested edit in point 3:
+  Different modules of OnlineV2 are under testing in the telemetry lab for an year or so
+as soon as development work is concluded.  The system has been running without an glitches.
+
+Also add - OnlineV2 has been interfaced with GWB, GAB, OF, sentinel etc....
+
+14) References:
+
+'OnlineV2- An upgraded Control and Monitor Software for GMRT'  by (give authors),
+to appear in the Proceedings of the MWSky conference held at NCRA from 3-5 December 2013  (confirm
+the dates).  Currently you can give a link to my homepage where I have kept a copy till
+the proceedings come up.
+
+'TELESET-ABCOM' - the reports by Laurent Pommier- you need to give the exact
+technical report references and link.
+
+Please include references for multi-threading, locations from where you got information
+on other CnM systems etc.
+
+15) Appendix - give a few statements at the beginning detailing what you are presenting
+in the appendix.   Communication protocols/ command structures/response structures?
+
+suggestion - you can remove the FPS test details and refer to Charu's report.
+It will reduce a few pages from the report size - its a bit too long.  
+
+Try to reduce thelength by some other way - maybe some of the appendix can be shortened
+when repetition is too much?   
+
+
+

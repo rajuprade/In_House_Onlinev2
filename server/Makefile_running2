@@ -1,0 +1,35 @@
+########################################################################
+# CMS Wrapper Server $ Version 1.0, Apr 30,2011, SRB $
+# use Make -f Makefile
+# This makefile is used to build targets
+# invokeWrapper
+#modified for Libxml inclusion.............
+########################################################################
+.SUFFIXES:
+.SUFFIXES:	.c .o
+INCLUDEDIR	=-I /usr/include/libxml2 
+HEADER		= server.h   
+CC              =gcc 
+CFLAGS          = -Wall -g ${INCLUDEDIR} -I.
+LIBS= -lm -lxml2
+LIBXML=-L/usr/include/libxml2 
+LIBS0=${LIBXML} 
+#LINK = ${CC} -g 
+
+CFILES0		= serv.c server.c
+
+OBJECT0		= ${CFILES0:.c=.o}
+
+TARGET		= serv
+####################################################
+all:	${HEADERS} ${TARGET}
+
+.c.o:
+	${CC} -c ${CFLAGS} -o ${<:.c=.o} $<
+
+serv:	${OBJECT0}
+	gcc ${OBJECT0} ${LIBS0} -o $@ $(LIBS)
+
+clean:
+	/bin/rm -f ${OBJECT0} ${TARGET}
+

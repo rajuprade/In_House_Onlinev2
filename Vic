@@ -1,0 +1,5 @@
+ Vic,
+           I have implemented same multi threaded server in C which will be connected to around 150 clients at a time. All clients will wait for commands to arrive in queue else they will send every 1 second monitoring command by their own to the client. Connections will be opened indefinitely.
+Up till now I have not got into any problem. 
+I need your advice should I change my design or it will work well.
+
